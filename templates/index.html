@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston Housing Price Prediction</title>
+</head>
+<body>
+    <h1>Boston Housing Price Prediction</h1>
+
+    <form id="predictionForm" onsubmit="submitForm(event)">
+        <!-- 添加特征的输入框 -->
+        <label for="crim">CRIM:</label>
+        <input type="number" step="0.1" id="crim" required>
+        <label for="ZN">ZN:</label>
+        <input type="number" step="0.1" id="ZN" required>
+        <label for="INDUS">INDUS:</label>
+        <input type="number" step="0.1" id="INDUS" required>
+        <label for="CHAS">CHAS:</label>
+        <input type="number" step="0.1" id="CHAS" required>
+        <label for="NOX">NOX:</label>
+        <input type="number" step="0.1" id="NOX" required>
+        <label for="RM">RM:</label>
+        <input type="number" step="0.1" id="RM" required>
+        <label for="AGE">AGE:</label>
+        <input type="number" step="0.1" id="AGE" required>
+        <label for="DIS">DIS:</label>
+        <input type="number" step="0.1" id="DIS" required>
+        <label for="RAD">RAD:</label>
+        <input type="number" step="0.1" id="RAD" required>
+        <label for="TAX">TAX:</label>
+        <input type="number" step="0.1" id="TAX" required>
+        <label for="PTRATIO">PTRATIO:</label>
+        <input type="number" step="0.1" id="PTRATIO" required>
+        <label for="b">b:</label>
+        <input type="number" step="0.1" id="b" required>
+        <label for="LSTAT">LSTAT:</label>
+        <input type="number" step="0.1" id="LSTAT" required>
+
+        <!-- 添加其他特征的输入框 -->
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    <h2>Result:</h2>
+    <p id="result"></p>
+
+    <script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+</body>
+</html>
